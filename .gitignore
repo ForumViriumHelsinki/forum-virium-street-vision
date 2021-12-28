@@ -6,3 +6,8 @@ mlruns
 date
 testout.txt
 .ipynb_checkpoints
+image-tests.ipynb
+mlflow_experiment_showcase.ipynb
+model-first/
+model_checkpoints/
+targets/
