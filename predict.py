@@ -199,8 +199,8 @@ def get_bounding_box(filepath, orig_filename, start_degree, end_degree):
             boxsize = (maxr-minr) * (maxc-minc)
             if boxsize > min_bounding_box_size:
                 max_degrees = end_degree - start_degree
-                degrees_start = minc / rect_width  * max_degrees
-                degrees_end = maxc / rect_width * max_degrees
+                degrees_start = start_degree + (minc / rect_width  * max_degrees)
+                degrees_end = start_degree + (maxc / rect_width * max_degrees)
                 boxes.append({ 'filename': orig_filename, 'class': cls_name, 'degrees': (degrees_start, degrees_end)})
     return boxes
 
